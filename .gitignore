@@ -1,0 +1,55 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+*.ps
+*.idx
+*.ilg
+*.ind
+*.ist
+*.brf
+*.glo
+*.glg
+*.gls
+*.acn
+*.acr
+*.alg
+*.loa
+*.spl
+*.upa
+*.upb
+*.slo
+*.sls
+*.cls~   # backup files from editors
+
+# Editor / OS artifacts
+*~
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+\#*\#
+.#*
+
+# Build directories
+build/
+output/
+
+# PDF (optional — uncomment to exclude compiled PDF from git)
+# main.pdf
