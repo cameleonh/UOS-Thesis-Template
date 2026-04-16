@@ -1,0 +1,167 @@
+%% ============================================================
+%% University of Seoul - Master Thesis Template
+%% 서울시립대학교 대학원 석사학위논문 LaTeX 템플릿
+%%
+%% Compile with: xelatex -> biber -> xelatex -> xelatex
+%%   or use latexmk: latexmk -xelatex main.tex
+%% ============================================================
+
+\documentclass[master]{uos-thesis}
+
+%% ============================================================
+%% Bibliography file
+%% ============================================================
+\addbibresource{references.bib}
+
+%% ============================================================
+%% Thesis Metadata - FILL IN YOUR INFORMATION
+%% ============================================================
+
+% English title (22pt on cover)
+\titleEn{Your Thesis Title Here}
+% Optional subtitle (comment out if none)
+% \subtitleEn{Your Subtitle Here}
+% Korean title (for 국문초록)
+\titleKo{논문 제목}
+
+% Author
+\authorEn{Gildong Hong}
+\authorKo{홍길동}
+
+% Department
+\departmentEn{Artificial Intelligence}
+\departmentKo{인공지능학과}
+
+% Degree
+\degreeEn{Master of Engineering}
+\degreeKo{공학석사}
+\degreeFieldEn{Engineering}
+\degreeFieldKo{공학}
+
+% Advisor
+\advisorEn{Advisor Name}
+\advisorKo{지도교수명}
+
+% Thesis Committee
+\committeeChair{Committee Chair Name}
+\committeeMemberA{Committee Member A Name}
+\committeeMemberB{Committee Member B Name}
+
+% Dates
+\coverDate{August 2026}          % Cover page date (학위수여일 기준 연, 월)
+\submissionDate{June 2026}       % Submission date
+\approvalDate{June 2026}         % Approval date
+
+
+%% ============================================================
+%% Additional packages (add your own here)
+%% ============================================================
+% \usepackage{listings}    % for code listings
+% \usepackage{tikz}        % for diagrams
+% \usepackage{pgfplots}    % for plots
+
+
+%% ============================================================
+%% Document Start
+%% ============================================================
+\begin{document}
+
+%% ============================================================
+%% (1) Cover Page (표지) - no page number
+%% ============================================================
+\makecover
+
+%% ============================================================
+%% (2) Submission Page (제출문) - no page number
+%% ============================================================
+\makesubmission
+
+%% ============================================================
+%% (3) Approval Page (인준서) - no page number
+%% ============================================================
+\makeapproval
+
+%% ============================================================
+%% (4) Abstract (본문이 영어이므로 앞에 영문초록)
+%%     - no page number
+%% ============================================================
+\begin{abstract}
+% Write your English abstract here.
+% The abstract should summarize the main contributions of your thesis.
+
+This is a placeholder for your abstract. Replace this text with a summary of
+your research motivation, methodology, key results, and contributions.
+
+The abstract should be concise yet comprehensive, typically ranging from
+200 to 500 words for a master's thesis.
+
+\keywords{Keyword1, Keyword2, Keyword3, Keyword4, Keyword5}
+\end{abstract}
+
+%% ============================================================
+%% (5) Inner Cover Page (속표지 - 표지와 동일) - no page number
+%% ============================================================
+\makeinnercover
+
+%% ============================================================
+%% (6)-(7) Table of Contents, List of Tables, List of Figures
+%%         Page numbers: roman numerals (i, ii, iii, ...)
+%% ============================================================
+\frontmatter
+
+\tableofcontents
+\clearpage
+
+\listoftables
+\clearpage
+
+\listoffigures
+\clearpage
+
+%% ============================================================
+%% (8) Body Text - Page numbers: arabic (1, 2, 3, ...)
+%% ============================================================
+\mainmatter
+
+\include{chapters/introduction}
+% \include{chapters/related_work}
+% \include{chapters/method}
+% \include{chapters/experiments}
+\include{chapters/conclusion}
+
+%% ============================================================
+%% (9) Bibliography (참고문헌)
+%% ============================================================
+\printbibliography[heading=bibintoc, title={Bibliography}]
+
+%% ============================================================
+%% (10) Appendices (부록, 있는 경우에 한함)
+%% ============================================================
+% \appendix
+% \include{chapters/appendix_a}
+
+%% ============================================================
+%% (11) Korean Abstract (본문이 영어이므로 뒤에 국문초록)
+%% ============================================================
+\backmatter
+
+\begin{abstractko}
+% 국문초록을 여기에 작성하세요.
+
+이곳에 국문초록을 작성합니다. 논문의 연구 동기, 방법론, 주요 결과 및 기여를
+요약하여 기술합니다.
+
+\keywordsko{키워드1, 키워드2, 키워드3, 키워드4, 키워드5}
+\end{abstractko}
+
+%% ============================================================
+%% (12) Acknowledgments (감사문, 있는 경우에 한함)
+%% ============================================================
+\begin{acknowledgments}
+% Write your acknowledgments here (optional).
+
+I would like to express my gratitude to my advisor for the guidance
+and support throughout my research.
+\end{acknowledgments}
+
+\end{document}
